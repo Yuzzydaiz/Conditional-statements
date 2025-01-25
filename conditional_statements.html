@@ -152,5 +152,55 @@
     </script>
     <div style="height: 3px; background-color: aqua;"></div><br><br>
 </section>
+
+<section>
+    <!-- SQI clinic is developing a system to calculate the Body Mass Index (BMI) of patients. You have been asked to write an algorithm that takes weight (in kilograms) and height (in meters) as inputs and returns the BMI along with the category: 'Underweight', 'Normal', 'Overweight', or 'Obese'. -->
+    <h1 for="">Input the patient height in metre </h1>
+    <input id="height" type="number">
+    <h1 for="">Input the patient weight in kg </h1>
+    <input id="weight" type="number">
+    <button onclick="calculate()" style="background-color: aqua; border-radius: 10px; width: 150px; height: 30px;">Check</button>
+    <h3 id="bmi">BMI:</h3>
+    <script>
+        function calculate() {
+            bmiValue= weight.value/(height.value*height.value)
+            if (bmiValue< 18.5) {
+                bmi.innerHTML =  'The patient BMI index is below 18.5, he/she is underweight'
+            }
+            if (bmiValue>=18.5 & bmi<25) {
+                bmi.innerHTML = 'The patient BMI index is from 18.5 to 25, he/she has a normal weight'
+            }
+            if (bmiValue>=25 & bmi<30) {
+                bmi.innerHTML = 'The patient BMI index is from 25 to 30, he/she is overweight'
+            }
+            if (bmiValue>=30) {
+                bmi.innerHTML =  'The patient BMI index is 30+, he/she is obese'
+            }
+        }
+    </script>
+    <div style="height: 3px; background-color: aqua;"></div><br><br>
+</section>
+
+<section>
+    <!-- An airline in Kano needs an algorithm to determine if a passenger’s luggage is overweight. The algorithm should take the luggage weight as input and return 'Underweight', 'Allowed', or 'Overweight' based on the weight limits (under 20kg is 'Underweight', 20-30kg is 'Allowed', above 30kg is 'Overweight')  -->
+    <h1 for="">Input the luggage weight in kg </h1>
+    <input id="LuggageWeight" type="number">
+    <button onclick="compute()" style="background-color: aqua; border-radius: 10px; width: 150px; height: 30px;">Check</button>
+    <h3 id="pass">Result:</h3>
+    <script>
+        function compute() {
+            if (LuggageWeight.value<20) {
+                pass.innerHTML =  'The passenger luggage is underweight, it is not allowed'
+            }
+            if (LuggageWeight.value>=20 & LuggageWeight.value<=30) {
+                pass.innerHTML = 'The passenger luggage is from 20kg to 30kg, it is allowed'
+            }
+            if (LuggageWeight.value>30) {
+                pass.innerHTML = 'The passenger luggage is overweight, it is not allowed'
+            }
+        }
+    </script>
+    <div style="height: 3px; background-color: aqua;"></div><br><br>
+</section>
 </body>
 </html>
