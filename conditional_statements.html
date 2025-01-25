@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+<section>
+    <!-- A delivery company in Aroje is facing complaints about incorrect package sorting due to mixed uppercase and lowercase addresses. You have been employed to develop an algorithm that ensures all address labels are transformed to lowercase before processing. Write a function to solve this issue. -->
+    <h1 for="">Input your address</h1>
+    <input id="address" type="text">
+    <button onclick="toLower()" style="background-color: aqua; border-radius: 10px; width: 150px; height: 30px;">Transform</button>
+    <h3 id="result">Result:</h3>
+    <script>
+        function toLower() {
+         result.innerHTML = address.value.toLowerCase()   
+        }
+    </script>
+<div style="height: 3px; background-color: aqua;"></div><br><br>
+</section>
+
+
+<section>
+    <!-- A library at Markudi Polytechnic has a catalogue system where book titles must be unique. However, the system currently does not check for duplicate titles with different letter cases (e.g., "The Great Developer" and "the great developer"). As a developer, write an algorithm to detect duplicate book titles regardless of case sensitivity. -->
+    <h1 for="">Input your the first book title</h1>
+    <input id="title1" type="text">
+    <h1 for="">Input your the second book title</h1>
+    <input id="title2" type="text">
+    <button onclick="check()" style="background-color: aqua; border-radius: 10px; width: 150px; height: 30px;">Check</button>
+    <h3 id="feedback">Result:</h3>
+    <script>
+        function check() {
+            title1 = title1.value.toLowerCase()
+            title2 = title2.value.toLowerCase()
+            if (title1==title2) {
+                feedback.innerHTML =  'These books have duplicate title'
+            }
+            else {feedback.innerHTML = 'These books have no duplicate titles'}  
+        }
+    </script>
+    <div style="height: 3px; background-color: aqua;"></div><br><br>
+</section>
+
+
+<section>
+    <!-- A school in Ado-Ekiti found that students are submitting essays with multiple spaces between words, making it hard for teachers to grade them. You have been hired to write an algorithm that removes extra spaces from the essays while keeping only one space between words -->
+    <h1 for="">Paste your essay here:</h1>
+    <textarea style="width: 400px; height: 100px;" id="essay" type="text"></textarea><br>
+    <button onclick="remove()" style="background-color: aqua; border-radius: 10px; width: 150px; height: 30px;">Remove extra spaces</button>
+    <h3 id="checkedEssay">Result:</h3>
+    <script>
+        function remove() {
+         checkedEssay.innerHTML = essay.value.trim().split(/\s+/).join(' ')   
+        }
+    </script>
+<div style="height: 3px; background-color: aqua;"></div><br><br>
+</section>
+
+ 
+<section>
+    <!-- A financial institution in Abeokuta needs an algorithm to verify if a customer’s password is strong. The password must be at least 8 characters long and contain uppercase and lowercase letters and a number. Write a function to validate passwords based on these rules. -->
+    <h1 for="">Create new password</h1>
+    <input id="password" type="password">
+    <button onclick="checkPassword()" style="background-color: aqua; border-radius: 10px; width: 150px; height: 30px;">GO</button>
+    <h3 id="result1">Result:</h3>
+    <h3 id="result2"></h3>
+    <h3 id="result2"></h3>
+    <script>
+        function checkPassword() {
+            if (password.value.length == 8 ){
+                result1.innerHTML='The password has 8 characters!'
+            }
+            else{
+                result1.innerHTML='The password is not strong enough! it must be atleast 8 characters!'
+            }
+            if (password.value.match('/\d/') == 8 ){
+                result2.innerHTML='The password includes an uppercase letter!'
+            }
+            else{
+                result2.innerHTML='The password is not strong enough! it must be include an uppercase letter!'
+            }
+            if (password.value.length == 8 ){
+                result3.innerHTML='The password includes a lower case letter!'
+            }
+            else{
+                result3.innerHTML='The password is not strong enough! it must be include a lowercase letter!'
+            }
+            if (password.value.length == 8 ){
+                result4.innerHTML='The password includes a number!'
+            }
+            else{
+                result4.innerHTML='The password is not strong enough! it must be include a number!'
+            }
+        }
+    </script>
+<div style="height: 3px; background-color: aqua;"></div><br><br>
+</section>
+
+
+<section>
+    <!-- A grocery store in Taki wants to reward customers who shop for an even number of items. You have been hired to write an algorithm that checks if the number of items in a customer’s cart is even and returns a discount if true. -->
+    <h1 for="">Input the number of items shopped</h1>
+    <input id="num" type="number">
+    <button onclick="checkEven()" style="background-color: aqua; border-radius: 10px; width: 150px; height: 30px;">Check</button>
+    <h3 id="deserve">Result:</h3>
+    <script>
+        function checkEven() {
+            num.value%2==0?deserve.innerHTML='The number of items in the cart is even, He/she deserves discount':deserve.innerHTML='The number of items in the cart is odd, No discount'
+        }
+    </script>
+    <div style="height: 3px; background-color: aqua;"></div><br><br>
+</section>
+
+<section>
+    <!-- A weather station in LAUTECH is experiencing issues with its temperature recording system. The system needs to categorise temperatures as 'Cold' (below 19°C), 'Warm' (20°C to 28°C), or 'Hot' (above 28°C). Write an algorithm that categorizes the temperature based on these criteria. -->
+    <h1 for="">Input temperature in °C</h1>
+    <input id="tempt" type="number">
+    <button onclick="categorize()" style="background-color: aqua; border-radius: 10px; width: 150px; height: 30px;">Check</button>
+    <h3 id="categ">Result:</h3>
+    <script>
+        function categorize() {
+            if (tempt.value < 19 ) {
+                categ.innerHTML =  'The temperatures is Cold (below 19°C)'
+            }
+            else if (tempt.value>19 & tempt.value<29) {
+                categ.innerHTML = 'The temperature is Warm (from 20°C to 28°C)'  
+            }
+            else {categ.innerHTML = 'The temperature is Hot (above 28°C)'}
+        }    
+    </script>
+    <div style="height: 3px; background-color: aqua;"></div><br><br>
+</section>
+
+<section>
+    <!-- An online quiz platform built by a level 2 student in SQI requires an algorithm to check if a student’s answer matches the correct answer, regardless of the case (e.g., "ogbomoso" should match "Ogbomoso"). Write a function to handle this scenario. -->
+    <h1 for="">Input your the student answer</h1>
+    <input id="studAns" type="text">
+    <h1 for="">Input your the correct answer</h1>
+    <input id="rightAns" type="text">
+    <button onclick="Compare()" style="background-color: aqua; border-radius: 10px; width: 150px; height: 30px;">Compare</button>
+    <h3 id="fb">Result:</h3>
+    <script>
+        function Compare() {
+            studAns = studAns.value.toLowerCase()
+            rightAns = rightAns.value.toLowerCase()
+            if (rightAns==studAns) {
+                fb.innerHTML =  'The student is correct!'
+            }
+            else {fb.innerHTML = 'The student is wrong!'} 
+        }
+    </script>
+    <div style="height: 3px; background-color: aqua;"></div><br><br>
+</section>
+</body>
+</html>
